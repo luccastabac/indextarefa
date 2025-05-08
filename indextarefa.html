@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Cadastro</title>
+  <style>
+    body {
+      background-color: #e40303;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background: rgb(31, 3, 133);
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="texto"],
+    input[type="email"],
+    input[type="senha"],
+    input[type="numero"] {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    .estados label {
+      display: block;
+      font-weight: normal;
+    }
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 8px;
+      background-color: #3c8dbc;
+      color: rgb(255, 0, 255);
+      border: none;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <form>
+    <h2>Cadastro</h2>
+
+    <label for="nome">Nome</label>
+    <input type="texto" id="nome" name="nome" placeholder="Seu nome">
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" placeholder="Seu e-mail">
+
+    <label for="senha">Senha</label>
+    <input type="senha" id="senha" name="senha" placeholder="Sua senha" >
+
+    <label for="confirmar">Confirmar Senha</label>
+    <input type="senha" id="confirmar" name="confirmar" placeholder="Confirme a senha" >
+
+    <label>Qual estado que mora:</label>
+    <div class="estados">
+      <label><input type="checkbox" name="estado" value="SP"> São Paulo</label>
+      <label><input type="checkbox" name="estado" value="RJ"> Rio de Janeiro</label>
+      <label><input type="checkbox" name="estado" value="MG"> Minas Gerais</label>
+      <label><input type="checkbox" name="estado" value="BA"> Bahia</label>
+      <label><input type="checkbox" name="estado" value="RS"> Rio Grande do Sul</label>
+    </div>
+
+    <label for="idade">Idade</label>
+    <input type="numero" id="idade" name="idade" placeholder="Sua idade" min="1" max="120">
+
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
